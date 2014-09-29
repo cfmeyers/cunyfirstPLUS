@@ -44,6 +44,10 @@ You can filter Sections by the following:
 
 -  closed
 
+-  include_days\[\]
+
+-  exclude_days\[\]
+
 ##  Using `CallAPI()`
 
 First create an associative array with the filter options you want:
