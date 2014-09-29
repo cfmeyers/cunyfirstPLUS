@@ -20,18 +20,58 @@ We can access using the function `CallAPI($resource, $fields)` where `$resource`
 
 -  semesters
 
+##  Sections Queries
+
+You can filter Sections by the following:
+
+-  course_id
+
+-  location_id
+
+-  instructor_id
+
+-  semester_id
+
+-  start_after
+
+-  start_before
+
+-  end_before
+
+-  end_after
+
+-  open
+
+-  closed
+
 ##  Using `CallAPI()`
-    
+
+First create an associative array with the filter options you want:
+
+~~~
+
+$fields = array('start_after' => '09:00',
+                'course_id' => '5',
+                'end_before' => '20:00');
+
+~~~
+
+Then name pick your resource:
+
+~~~
+
+$resource = 'sections';
+
+~~~
+
+Then use function `CallAPI` to get an array back with your results:
+
+~~~
+
+$response = CallAPI($resource, $fields);
+echo $response;
+
+~~~
 
 
 
-start_before (e.g. http://cuny-first-papi.herokuapp.com/sections?start_before=09:00)
-start_after (e.g. http://cuny-first-papi.herokuapp.com/sections?start_after=09:00)
-end_before (e.g. http://cuny-first-papi.herokuapp.com/sections?end_before=09:00)
-end_after (e.g. http://cuny-first-papi.herokuapp.com/sections?end_after=09:00)
-course_id (e.g. http://cuny-first-papi.herokuapp.com/sections?course_id=4)
-location_id (e.g. http://cuny-first-papi.herokuapp.com/sections?location_id=4)
-instructor_id (e.g. http://cuny-first-papi.herokuapp.com/sections?instructor_id=4)
-semester_id (e.g. http://cuny-first-papi.herokuapp.com/sections?semester_id=1)
-open (e.g. http://cuny-first-papi.herokuapp.com/sections?open=true)
-closed (e.g. http://cuny-first-papi.herokuapp.com/sections?closed=true)
