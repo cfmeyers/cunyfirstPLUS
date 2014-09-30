@@ -1,4 +1,5 @@
 <?php 
+
 function CallAPI($resource, $fields = false)
 {
     $base_url = 'http://cuny-first-papi.herokuapp.com/';

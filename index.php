@@ -10,6 +10,7 @@ $resource = 'sections';
 
 
 $response = CallAPI($resource, $fields);
+
 print_r($response);
 
 
