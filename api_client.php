@@ -10,7 +10,7 @@ function CallAPI($resource, $fields = false)
     }
     $result = file_get_contents($url);
 
-    return $result;
+    return json_decode($result);
 }
 
 
