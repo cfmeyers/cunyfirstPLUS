@@ -56,11 +56,12 @@ First create an associative array with the filter options you want:
 
 $fields = array('start_after' => '09:00',
                 'course_id' => '5',
-                'end_before' => '20:00');
+                'end_before' => '20:00',
+		'verbose' => 'true');
 
 ~~~
 
-Then name pick your resource:
+Then name pick your resource (the above example only works with sections):
 
 ~~~
 
